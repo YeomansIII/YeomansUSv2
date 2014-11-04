@@ -45,3 +45,7 @@ body {
     position: relative;
     bottom: 0;
 }
+.form-control {
+    margin-bottom: 15px;
+    width: 40em;
+}

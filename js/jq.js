@@ -18,18 +18,20 @@ $(document).ready(function() {
   $('#top-bg').css('height', window.innerHeight + 'px');
   equalHeight($(".thumbnail"));
 
-    var mainbottom = 300;
-
-  $(window).on('scroll', function() {
-
-    // we round here to reduce a little workload
-    stop = Math.round($(window).scrollTop());
-    if (stop > mainbottom) {
-      $('.navbar-default').addClass('past-main');
-    } else {
-      $('.navbar-default').removeClass('past-main');
-    }
-
-  });
+  var scroll_start = 0;
+  var startchange = $('#main-contain');
+  var offset = startchange.offset();
+  console.log("Startchange: "+startchange.length+"   Offset: "+offset.top+"    scrollTop: "+$(this).scrollTop());
+  if (startchange.length) {
+    $(document).scroll(function() {
+        console.log("Scrolling!");
+      scroll_start = $(this).scrollTop();
+      if (scroll_start+50 > offset.top) {
+        $('.navbar-default').css('background-color', '#111');
+      } else {
+        $('.navbar-default').css('background-color', 'transparent');
+      }
+    });
+  }
 
 });
