@@ -46,7 +46,18 @@ body {
   text-align: center;
   text-shadow: black 0.5em 0.5em 0.7em;
 }
+@media (max-width: @screen-xs) {
+    #intro h1 {
+        font-size: 4pt !important;
+    }
+}
+@media (max-width: @screen-sm) {
+    #intro h1 {
+        font-size: 4pt !important;
+    }
+}
 #intro h1 {
+    font-size: 3.2em;
     padding: 0;
 }
 #main-contain {
@@ -56,8 +67,8 @@ body {
   box-shadow: black 0 0 100px;
 }
 h1 {
-  padding-top: 35px;
-  padding-bottom: 15px;
+  padding-top: 110px;
+  padding-bottom: 50px;
 }
 .thumbnail-buttons {
   position: relative;
