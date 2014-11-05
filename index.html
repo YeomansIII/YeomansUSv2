@@ -21,6 +21,8 @@
   <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
   <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
   <script src="js/ie-emulation-modes-warning.js"></script>
+  <script src="js/jquery-2.1.1.min.js"></script>
+  <script src="js/jq.js"></script>
 
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
@@ -71,10 +73,16 @@
     <!--About-->
     <div id="about" class="container">
       <h1>About Me</h1>
-      <img src="images/me.png" style="float: left; border-radius: 999px;"/>
-      <p>Amet sint velit duis sit exercitation in sunt do id ad proident dolore voluptate. Excepteur irure eu eu nostrud deserunt cupidatat voluptate reprehenderit proident. Duis dolor cupidatat labore non occaecat fugiat minim incididunt et voluptate nisi.
-        Minim deserunt aliquip ad aliquip cillum nulla sint ad nisi proident et irure aute. Anim laborum aliqua aliquip reprehenderit sunt ullamco excepteur. Laboris excepteur aliquip velit cupidatat deserunt irure.
-      </p>
+      <div class="row">
+        <div class="col-xs-6 col-md-4">
+          <img src="images/me.png" style="float: left; border-radius: 999px;" />
+        </div>
+        <div class="col-xs-12 col-md-8">
+          <p>Amet sint velit duis sit exercitation in sunt do id ad proident dolore voluptate. Excepteur irure eu eu nostrud deserunt cupidatat voluptate reprehenderit proident. Duis dolor cupidatat labore non occaecat fugiat minim incididunt et voluptate
+            nisi. Minim deserunt aliquip ad aliquip cillum nulla sint ad nisi proident et irure aute. Anim laborum aliqua aliquip reprehenderit sunt ullamco excepteur. Laboris excepteur aliquip velit cupidatat deserunt irure.
+          </p>
+        </div>
+      </div>
 
     </div>
 
@@ -100,7 +108,8 @@
             <img src="images/roomlistpreview.jpg" alt="...">
             <div class="caption">
               <h3>GMU RoomList</h3>
-              <p>This first iteration of a campus housing connections website where students can put their room information and find out who else is on their floor and in their building.<br>Built completely from scratch using HTML/CSS/JQuery with PHP and a MySQL backend.</p>
+              <p>This first iteration of a campus housing connections website where students can put their room information and find out who else is on their floor and in their building.
+                <br>Built completely from scratch using HTML/CSS/JQuery with PHP and a MySQL backend.</p>
               <p><a href="#" class="btn btn-primary" role="button">View Live</a> <a href="#" class="btn btn-default" role="button">Code</a>
               </p>
             </div>
@@ -111,7 +120,8 @@
             <img src="images/carbonpreview.jpg" alt="...">
             <div class="caption">
               <h3>Carbon-14 Dating</h3>
-              <p>A basic HTML/CSS/JQuery website completed for my final project in AP Calculus.  The website takes in two of three values and calculates the third missing value using a specific formula.  The calculations are then fed into a javascript library to create the beautiful informative graph.</p>
+              <p>A basic HTML/CSS/JQuery website completed for my final project in AP Calculus. The website takes in two of three values and calculates the third missing value using a specific formula. The calculations are then fed into a javascript library
+                to create the beautiful informative graph.</p>
               <p class="thumbnail-buttons"><a href="#" class="btn btn-primary" role="button">View Live</a> <a href="#" class="btn btn-default" role="button">Code</a>
               </p>
             </div>
@@ -121,16 +131,28 @@
     </div>
 
     <div id="contact" class="container">
-        <h1>Contact</h1>
-        <div class="jumbotron">
-          <div class="form-group">
-            <label for="contact"></label>
-            <input type="text" class="form-control" id="" placeholder="Your E-mail"/>
-            <input type="text" class="form-control" id="" placeholder="Message" style="line-height: 8em; height: 8em;"/>
-            <input type="button" name="some_name" class="form-control" id="send-button" value="Send"/>
-            <p class="help-block">Help text here.</p>
+      <h1>Contact</h1>
+      <div class="jumbotron">
+        <div class="form-group">
+          <label for="contact"></label>
+          <div class="row">
+            <div class="col-xs-12 col-md-6">
+              <input type="text" class="form-control" id="" placeholder="Your E-mail" />
+            </div>
           </div>
+          <div class="row">
+            <div class="col-xs-12 col-md-6">
+              <input type="text" class="form-control" id="" placeholder="Message" style="line-height: 8em; height: 8em;" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-6 col-md-2">
+              <input type="button" name="submit-button" class="form-control" id="send-button" value="Send" />
+            </div>
+          </div>
+          <p class="help-block">Help text here.</p>
         </div>
+      </div>
     </div>
 
   </div>
@@ -140,8 +162,6 @@
   <!-- Bootstrap core JavaScript
     ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
-  <script src="js/jquery-2.1.1.min.js"></script>
-  <script src="js/jq.js"></script>
   <script src="js/jquery.easing.min.js"></script>
   <script src="js/scrolling-nav.js"></script>
   <script src="dist/js/bootstrap.min.js"></script>
