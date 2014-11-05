@@ -14,32 +14,34 @@ function equalHeight(group) {
 
 
 $(document).ready(function() {
+  $(window).load(function() {
+    equalHeight($(".thumbnail"));
+  });
+
   $('#top-jumbo').css('height', window.innerHeight + 'px');
   $('#top-bg').css('height', window.innerHeight + 'px');
-  equalHeight($(".thumbnail"));
-
 
 
   var scroll_start = 0;
   var startchange = $('#main-contain');
   var offset = startchange.offset();
-  console.log("Startchange: "+startchange.length+"   Offset: "+offset.top+"    scrollTop: "+$(this).scrollTop());
+  console.log("Startchange: " + startchange.length + "   Offset: " + offset.top + "    scrollTop: " + $(this).scrollTop());
   if (startchange.length) {
     $(document).scroll(function() {
-        console.log("Scrolling!");
+      console.log("Scrolling!");
       scroll_start = $(this).scrollTop();
-      if (scroll_start+50 > offset.top) {
+      if (scroll_start + 50 > offset.top) {
         $('.navbar-default').css('background-color', '#111');
       } else {
         $('.navbar-default').css('background-color', 'transparent');
       }
-      if (scroll_start+454 > offset.top) {
+      if (scroll_start + 454 > offset.top) {
         $('#intro').addClass('intro-rel');
         $('#intro').removeClass('intro-fixed');
       } else {
         $('#intro').addClass('intro-fixed');
         $('#intro').removeClass('intro-rel');
-    }
+      }
     });
   }
 
