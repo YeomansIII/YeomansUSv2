@@ -18,6 +18,8 @@ $(document).ready(function() {
   $('#top-bg').css('height', window.innerHeight + 'px');
   equalHeight($(".thumbnail"));
 
+
+
   var scroll_start = 0;
   var startchange = $('#main-contain');
   var offset = startchange.offset();
@@ -31,6 +33,13 @@ $(document).ready(function() {
       } else {
         $('.navbar-default').css('background-color', 'transparent');
       }
+      if (scroll_start+454 > offset.top) {
+        $('#intro').addClass('intro-rel');
+        $('#intro').removeClass('intro-fixed');
+      } else {
+        $('#intro').addClass('intro-fixed');
+        $('#intro').removeClass('intro-rel');
+    }
     });
   }
 
