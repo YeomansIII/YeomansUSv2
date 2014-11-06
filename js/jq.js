@@ -11,6 +11,10 @@ function equalHeight(group) {
   });
 }
 
+function resizeTopBG() {
+  $('#top-jumbo').css('height', window.innerHeight + 'px');
+  $('#top-bg').css('height', window.innerHeight + 'px');
+}
 
 
 $(document).ready(function() {
@@ -18,9 +22,11 @@ $(document).ready(function() {
     equalHeight($(".thumbnail"));
   });
 
-  $('#top-jumbo').css('height', window.innerHeight + 'px');
-  $('#top-bg').css('height', window.innerHeight + 'px');
 
+  resizeTopBG();
+  $(window).resize(function() {
+    resizeTopBG()
+  });
 
   var scroll_start = 0;
   var startchange = $('#main-contain');
