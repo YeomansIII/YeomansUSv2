@@ -77,11 +77,60 @@
         </div>
         <div class="col-xs-12 col-md-8">
           <p>
-              I am currently a Freshman at George Mason University studying Applied Information Technology with a concentration in Web Development.  I enjoy programming as a hobby and a job.  Some things that interest me and I have experience in are Web development, Mobile development, and Graphic Design.  You can find more about my experience in my resume
+            I am currently a Freshman at George Mason University studying Applied Information Technology with a concentration in Web Development. I enjoy programming as a hobby and a job. Some things that interest me are: Web development, Mobile development, and
+            Graphic Design. You can find out more about me and my experience in my <a href="resume.pdf">résumé</a>.
           </p>
         </div>
       </div>
+    </div>
 
+    <!--Experience-->
+    <div id="experience" class="container">
+      <h1>Experience</h1>
+      <div class="row">
+        <div class="col-md-3 text-center">
+          <h3>HTML, CSS</h3>
+        </div>
+        <div class="col-md-3 text-center">
+          <h3>Java</h3>
+        </div>
+        <div class="col-md-3 text-center">
+          <h3>Javascript, Jquery</h3>
+        </div>
+        <div class="col-md-3 text-center">
+          <h3>Python, Django</h3>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-md-3 text-center">
+          <h3>PHP</h3>
+        </div>
+        <div class="col-md-3 text-center">
+          <h3>Android Development</h3>
+        </div>
+        <div class="col-md-3 text-center">
+          <h3>Unix/Linux</h3>
+        </div>
+        <div class="col-md-3 text-center">
+          <h3>Debugging, Troubleshooting</h3>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-md-3 text-center">
+          <h3>Computer Hardware/Building</h3>
+        </div>
+        <div class="col-md-3 text-center">
+          <h3>Customer Service</h3>
+        </div>
+        <div class="col-md-3 text-center">
+          <h3>Microsoft Office</h3>
+        </div>
+        <div class="col-md-3 text-center">
+          <h3>RMA Processing</h3>
+        </div>
+      </div>
     </div>
 
     <!-- Projects -->
@@ -97,7 +146,7 @@
               <h3>Yeomans.us (This Site)</h3>
               <p>My homepage and hub of my projects.
                 <br>Using HTML/CSS/JQuery and Bootstrap to create a responsive, minimalist design.</p>
-              <p><a href="#top-bg" class="page-scroll btn btn-primary" role="button">View Live</a> <a href="#" class="btn btn-default" role="button">Code</a>
+              <p><a href="#top-bg" class="page-scroll btn btn-primary" role="button">View Live</a> <a href="https://github.com/YeomansIII/YeomansUSv2" class="btn btn-default" role="button">Code</a>
               </p>
             </div>
           </div>
@@ -110,7 +159,7 @@
               <p>The second version of my Roomlist website, being developed with GMU's Student Run Computing and Techonology (SRCT) student group.
                 <br>With a django backend and bootstrap frontend, SRCTRoomlist is intended for students to connect with other students that live on campus with them. Students have direct access to privacy controls and log in with their GMU credentials (using
                 CAS) for a secure website.</p>
-              <p><a href="#top-bg" class="page-scroll btn btn-primary" role="button">View Live</a> <a href="https://git.gmu.edu/srct/roomlist" class="btn btn-default" role="button">Code</a>
+              <p><a href="#top-bg" class="page-scroll btn btn-primary disabled" role="button">In Production</a> <a href="https://git.gmu.edu/srct/roomlist" class="btn btn-default" role="button">Code</a>
               </p>
             </div>
           </div>
@@ -122,7 +171,7 @@
               <h3>GMURoomList v1</h3>
               <p>The first iteration of a campus housing connections website where students can put their room information and find out who else is on their floor and in their building.
                 <br>Built completely from scratch using HTML/CSS/JQuery with PHP and a MySQL database.</p>
-              <p><a href="gmuroomlist" class="btn btn-primary" role="button">View Live</a> <a href="https://git.gmu.edu/jyeoman2/roomlist" class="btn btn-default" role="button">Code</a>
+              <p><a href="v1roomlist" class="btn btn-primary" role="button">View Live</a> <a href="https://github.com/YeomansIII/v1roomlist" class="btn btn-default" role="button">Code</a>
               </p>
             </div>
           </div>
@@ -134,7 +183,7 @@
               <h3>Carbon-14 Dating</h3>
               <p>A basic HTML/CSS/JQuery website completed for my final project in AP Calculus. The website takes in two of three values and calculates the third missing value using a specific formula. The calculations are then fed into a javascript library
                 to create the beautiful informative graph.</p>
-              <p class="thumbnail-buttons"><a href="carbon14" class="btn btn-primary" role="button">View Live</a> <a href="#" class="btn btn-default" role="button">Code</a>
+              <p class="thumbnail-buttons"><a href="carbon14" class="btn btn-primary" role="button">View Live</a> <a href="https://github.com/YeomansIII/carbon14" class="btn btn-default" role="button">Code</a>
               </p>
             </div>
           </div>
@@ -144,31 +193,29 @@
 
     <div id="contact" class="container">
       <h1>Contact</h1>
-      <div class="jumbotron">
-        <div class="form-group">
-          <label for="contact"></label>
-          <div class="row">
-            <div class="col-xs-12 col-md-6">
-              <input type="text" class="form-control" id="" placeholder="Your E-mail" />
-            </div>
+      <h2>Email: jason@yeomans.us</h2>
+    </div>
+
+    <hr id="footline">
+    <div class="container" id="footer">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="col-md-8">
+            <a href="{% url 'about' %}" target="_blank">About</a> &middot;
+            <a href="{% url 'privacy' %}" target="_blank">Privacy</a> &middot;
+            <a href="http://srct.gmu.edu/documents/usage_policy" target="_blank">Terms of Service</a> &middot;
+            <a href="http://srct.gmu.edu/contact/" target="_blank">Contact</a>
           </div>
-          <div class="row">
-            <div class="col-xs-12 col-md-6">
-              <input type="text" class="form-control" id="" placeholder="Message" style="line-height: 8em; height: 8em;" />
-            </div>
+          <div class="col-md-4">
+            <p class="muted pull-right">See my <a href="https://github.com/YeomansIII" target="_blank">Github</a> and <a href="https://git.gmu.edu//u/jyeoman2" target="_blank">GMU Git</a>.</p>
           </div>
-          <div class="row">
-            <div class="col-xs-6 col-md-2">
-              <input type="button" name="submit-button" class="form-control" id="send-button" value="Send" />
-            </div>
-          </div>
-          <p class="help-block">Help text here.</p>
         </div>
       </div>
     </div>
 
   </div>
   <!-- /container -->
+
 
 
   <!-- Bootstrap core JavaScript
