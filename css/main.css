@@ -32,6 +32,12 @@ a:hover, a:focus {
   text-decoration: none;
   outline: none;
 }
+.lightbox {
+  display: none;
+}
+.lightbox > img {
+  max-width: 100%;
+}
 #header {
   position: fixed;
   top: 0;
@@ -138,6 +144,9 @@ a:hover, a:focus {
   -moz-box-shadow: none;
   box-shadow: none;
 }
+.skill-desc {
+  height: 8em;
+}
 .box {
   padding: 50px 30px;
   background: #fff;
@@ -240,6 +249,11 @@ a:hover, a:focus {
 }
 .portfolio-item:hover .overlay {
   opacity: 1;
+}
+@media (max-width: 765px) {
+  .portfolio-items.col-4 > li {
+    width: 100%;
+  }
 }
 
 /* Start: Recommended Isotope styles */
@@ -481,6 +495,11 @@ a:hover, a:focus {
 .navbar-default .navbar-nav > li.active > a, .navbar-default .navbar-nav > li.active:focus > a, .navbar-default .navbar-nav > li.active:hover > a, .navbar-default .navbar-nav > li:hover > a, .navbar-default .navbar-nav > li:focus > a, .navbar-default .navbar-nav > li.active > a:focus, .navbar-default .navbar-nav > li.active:focus > a:focus, .navbar-default .navbar-nav > li.active:hover > a:focus, .navbar-default .navbar-nav > li:hover > a:focus, .navbar-default .navbar-nav > li:focus > a:focus {
   background-color: #52b6ec;
   color: #fff;
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  .navbar-left {
+    display: none;
+  }
 }
 .icon-lg {
   font-size: 48px;
