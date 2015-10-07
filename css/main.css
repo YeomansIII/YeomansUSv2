@@ -32,11 +32,22 @@ a:hover, a:focus {
   text-decoration: none;
   outline: none;
 }
+.featherlight-content {
+  width: 50%;
+}
 .lightbox {
   display: none;
+  width: 100%;
 }
 .lightbox > img {
+  width: 100%;
+}
+.lightbox > div > img {
   max-width: 100%;
+}
+.echelon-full-image-wrapper {
+  width: 100%;
+  text-align: center;
 }
 #header {
   position: fixed;
@@ -250,11 +261,6 @@ a:hover, a:focus {
 .portfolio-item:hover .overlay {
   opacity: 1;
 }
-@media (max-width: 765px) {
-  .portfolio-items.col-4 > li {
-    width: 100%;
-  }
-}
 
 /* Start: Recommended Isotope styles */
 
@@ -424,6 +430,21 @@ a:hover, a:focus {
   line-height: 36px;
   text-align: center;
   padding: 0;
+}
+.icon-social2.icon-github {
+  border: 0;
+  color: #000;
+  border-radius: 100%;
+  display: inline-block !important;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  padding: 0;
+  background: #DDD;
+}
+.icon-social2.icon-github:hover {
+  background: #FFF;
 }
 .icon-social.icon-facebook {
   background: #4f7dd4;
@@ -632,5 +653,13 @@ textarea#message {
   100% {
     opacity: 1;
     -o-transform: scale(1);
+  }
+}
+@media (max-width: 765px) {
+  .portfolio-items.col-3 > li {
+    width: 100%;
+  }
+  .featherlight-content {
+    width: 95%;
   }
 }
